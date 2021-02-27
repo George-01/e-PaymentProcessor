@@ -12,8 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PaymentProcessor.Models.Entity.Data;
+using PaymentProcessor.Services.PaymentProcessorMapper;
+using AutoMapper;
 
-namespace PaymentProcessor.Api
+namespace PaymentProcessor.Services
 {
     public class Startup
     {
@@ -29,6 +31,9 @@ namespace PaymentProcessor.Api
         {
             services.AddDbContext<ApplicationDbContext>
                (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+            services.AddAutoMapper(typeof(PaymentProcessorMappings));
 
             services.AddControllers();
         }

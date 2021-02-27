@@ -1,6 +1,6 @@
 using System;
 
-namespace PaymentProcessor.Api
+namespace PaymentProcessor.Services
 {
     public class WeatherForecast
     {

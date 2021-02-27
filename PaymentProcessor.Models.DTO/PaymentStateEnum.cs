@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PaymentProcessor.Models.Entity.Entity
+namespace PaymentProcessor.Models.DTO
 {
     public enum PaymentStateEnum
     {
